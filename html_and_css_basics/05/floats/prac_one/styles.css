@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 100px;
+  background: grey;
+  border: 1px solid darkgray;
+  clear: both;
+}
+
+main section {
+  width: 100%;
+}
+
+main section > div {
+  height: 300px;
+  width: 33.333%;
+  float: left;
+  background: grey;
+  border: 1px solid darkgrey;
+}
+
+main section > section {
+  height: 300px;
+  width: 50%;
+  float: left;
+  background: grey;
+  border: 1px solid darkgrey;
+}
