@@ -1,0 +1,57 @@
+h1 {
+  color: blue;
+  background: gold;
+  text-decoration: underline;
+}
+
+main h2 {
+  color: purple;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid orange;
+}
+
+main section {
+  width: 50%;
+  height: 200px;
+  background: gray;
+  border: 1px solid black;
+}
+
+section p {
+  color: white;
+}
+
+footer {
+  background: black;
+  border: 1px solid lightgreen;
+}
+
+footer h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* relational css */
+
+div h2 {
+  color: purple;
+}
+
+div h3 {
+  color: yellow;
+}
+
+/* direct child */
+section > h3 {
+  color: blue;
+}
+
+article > h3 {
+  color: red;
+}
+/* more specific  */
+section > article > h3 {
+  color: orange;
+}
