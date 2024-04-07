@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  height: 1px;
+  background: rgb(232,232,232);
+  border: none;
+}
+
+/* HEADER */
+
+header {
+  float: left;
+  width: 10%;
+  padding-left: 20px;
+}
+
+header nav img {
+  display: block;
+  width: 100%;
+}
+
+header nav img + a {
+  font-size: 1.4em;
+}
+
+header nav img + a + a {
+  display: block;
+  margin-block: 7px;;
+  font-size: 1.7em;
+}
+
+header nav form input {
+  border: none;
+}
+
+header nav form button {
+  border: none;
+  background: transparent;
+}
+
+header > nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+header > nav > ul > li {
+  padding-block: 5px;
+}
+
+header nav a {
+  font-size: 2em;
+  font-weight: 300;
+  text-decoration: none;
+  color: rgb(134,134,134);
+}
+
+header nav img + a {
+  color: rgb(252,192,10);
+  font-weight: 600;
+}
+
+/* MAIN */ 
+
+main {
+  margin-bottom: 30px;
+}
+
+main h1 {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+main h3,
+.main-two section .row div h4 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: rgb(134,134,134);
+}
+
+.main-left {
+  width: 60%;
+  float: left;
+}
+
+.main-left img {
+  display: block;
+  width: 95%;
+}
+
+.main-right {
+  float: left;
+  width: 30%;
+}
+
+.main-right section {
+  padding: 7px;
+}
+
+.main-right section span,
+.main-two section .row div > span {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: rgb(42,185,113);
+}
+
+.main-right section h2 {
+  margin-top: 7px;
+  font-size: 2.5em;
+}
+
+/* SECOND MAIN SECTION */
+
+.main-two {
+  width: 100%;
+  padding-left: 10%;
+}
+
+.main-two h2 {
+  font-size: 1.8em;
+  margin-bottom: 1.4em;
+}
+
+.main-two section .row {
+  padding-block: 20px;
+}
+
+.main-two section .row div {
+  float: left;
+  width: 33.333%;
+}
+
+.main-two section .row div h3 {
+  width: 65%;
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 2.5em;
+}
+
+.main-two section .row div h5 {
+  margin-bottom: 7px;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: rgb(175,175,175);
+}
+
+.main-two section .row div > p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: 300;
+  color: rgb(122,122,122);
+}
+
+/* TABLET  */
+
+@media screen and (max-width: 1124px) {
+
+  header {
+    padding-inline: 5px;
+  }
+
+  /* header */
+
+  header nav img + a {
+    font-size: 1.2em;
+  }
+
+  header nav a {
+    font-size: 1.2em;
+  }
+
+  header nav img + a + a {
+    font-size: 1em;
+  }
+  
+  header nav img + a + a {
+    font-size: 1.4em;
+  }
+
+  /* main */
+
+  main h1 {
+    font-size: 2.2em;
+  }
+
+  .main-right section h2,
+  .main-two section .row div h3 {
+    font-size: 1.6em;
+  }
+
+  .main-two section .row div h3 {
+    width: 100%;
+  }
+
+  main h3, 
+  .main-two section .row div h4 {
+    font-size: 1.1em;
+  }
+
+  /* second main */
+
+  .main-two section .row {
+    padding-block: 10px;
+  }
+
+  .main-two section .row div h5 {
+    font-size: 1.1em;
+    margin-top: 3px;
+  }
+
+  .main-two section .row div > p {
+    font-size: 1.1em;
+  }
+
+  /* images */ 
+
+  .main-two section .row img {
+    width: 175px;
+  }
+  
+  .main-left img {
+    max-height: 400px;
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+
+  header {
+    float: none;
+  }
+
+  .main-left {
+    width: 100%;
+  }
+
+  .main-right,
+  .mobile {
+    display: none;
+  }
+
+  .main-two {
+    padding-left: 0;
+    clear: both;
+  }
+
+  .main-two section .row img {
+    width: 125px;
+  }
+
+  .main-two section .row div h3 {
+    font-size: 1.2em;
+  }
+
+  .main-two section .row div > p {
+    width: 100%;
+    font-size: 1.1em;
+  }
+}
