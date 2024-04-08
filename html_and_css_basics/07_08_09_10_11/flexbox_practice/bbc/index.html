@@ -13,21 +13,24 @@
   <header>
     <section class="logo">
       <span>BBC</span>
+      <section class="login desktop">
+        <button><svg fill="#FAFAFA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg><span>Sign in</span></button>
+      </section>
     </section>
-    <section class="login">
-      <button><svg fill="#FAFAFA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg><span>Sign in</span></button>
-    </section>
-    <nav>
+    <button class="mobile">
+      <svg fill="#FAFAFA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Pro 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d="M0 88C0 74.7 10.7 64 24 64H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24H424c13.3 0 24 10.7 24 24z"/></svg>
+    </button>
+    <nav class="desktop">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">News</a></li>
-        <li><a href="#">Sport</a></li>
-        <li><a href="#">Reel</a></li>
-        <li><a href="#">Worklife</a></li>
+        <li><a href="#">Sports</a></li>
+        <li class="remove-li"><a href="#">Reel</a></li>
+        <li class="remove-li"><a href="#">Worklife</a></li>
         <li><a href="#">Travel</a></li>
-        <li><a href="#">Future</a></li>
-        <li><a href="#">Culture</a></li>
-        <li>
+        <li class="remove-li"><a href="#">Future</a></li>
+        <li class="remove-li"><a href="#">Culture</a></li>
+        <li class="remove-li">
           <select name="more" id="more">
             <option value="more" selected disabled>More</option>
             <option value="one">One</option>
