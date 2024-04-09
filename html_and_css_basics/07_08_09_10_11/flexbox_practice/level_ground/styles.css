@@ -3,3 +3,144 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background: rgb(102,118,138);
+}
+
+header section > a {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  background: rgb(252,252,252);
+  color: rgb(102,118,138);
+}
+
+header, nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav > ul {
+  list-style: none;
+  gap: 10px;
+}
+
+nav > ul > li > a {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: rgb(252,252,252);
+}
+
+/* MAIN */
+
+main > section {
+  padding: 60px;
+  background: rgb(102,118,138);
+}
+
+main .hero h1 {
+  padding: 10px;
+  font-size: 6em;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(252,252,252);
+}
+
+main .hero p {
+  width: 60%;
+  margin: 0 auto;
+  padding-block: 15px;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(252,252,252);
+}
+
+main .hero section span {
+  display: block;
+  padding-block: 25px;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(252,252,252);
+}
+
+main .banner {
+  background: rgb(252,252,252);
+}
+
+main > section + section h2 {
+  font-size: 4em;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(22,31,42)
+}
+
+main > section + section p {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(22,31,42)
+}
+
+main .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgb(219,223,226);
+}
+
+main .card-container section {
+  text-align: center;
+}
+
+main .card-container img {
+  margin: 0 auto;
+}
+
+main .card-container h3 {
+  margin-top: 20px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+main .card-container p {
+  width: 60%;
+  margin: 20px auto;
+  margin-bottom: 40px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main .card-container a {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid rgb(151,151,151);
+  color: rgb(22,31,42);
+  font-size: 1.4em;
+  font-weight: 600;
+  text-align: center;
+}
+
+main .volunteer-container {
+  background: rgb(252,252,252);
+}
