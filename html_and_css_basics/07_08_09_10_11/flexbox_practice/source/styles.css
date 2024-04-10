@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  fill: rgb(56,78,99);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* HEADER */
+
+header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgb(245,249,252);
+}
+
+header span {
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(46,70,91);
+}
+
+header nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav > ul > li > a {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: rgb(124,141,155);
+}
+
+header nav + a,
+main .hero .hero-text-container form button {
+  padding: 10px 25px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: center;
+  background: rgb(46,70,91);;
+  color: rgb(252,252,252);
+}
+
+/* MAIN */
+
+main {
+  background: rgb(245,249,252);
+}
+
+main .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  background: rgb(245,249,252);
+}
+
+main .hero .hero-text-container span {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(124,141,155);
+}
+
+main .hero .hero-text-container h1,
+.hero-two h2 {
+  width: 40%;
+  margin-block: 15px;
+  font-size: 3em;
+  font-weight: 600;
+  color: rgb(46,70,91);
+}
+
+main .hero .hero-text-container form {
+  display: flex;
+}
+
+main .hero .hero-text-container form input {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  background: rgb(225,234,240);
+  border: none;
+}
+
+main .hero .hero-text-container form ::placeholder {
+  padding-left: 14px;
+  font-size: 1.2em;
+  color: rgb(124,141,155);
+}
+
+main .hero .hero-text-container input {
+  width: 100%;
+  max-width: 175px;
+  padding: 10px;
+  background: rgb(225,234,240);
+  border: none;
+}
+
+main .hero .hero-text-container p {
+  width: 50%;
+  margin-block: 20px;
+  font-size: 1.6em;
+  line-height: 1.2;
+  color: rgb(46,70,91);
+  font-weight: 400;
+}
+
+/* card container */
+
+.card-container {
+  display: flex; 
+  align-items: center;
+  margin-block: 80px;
+}
+
+.card-container section {
+  flex: 1 0 25%;
+}
+
+.card-container section h3 {
+  margin-block: 10px;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: rgb(56,78,99);
+}
+
+.card-container section p,
+.card-container section a {
+  width: 60%;
+  margin-block: 15px;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: rgb(56,78,99);
+}
+
+.card-container section a {
+  width: initial;
+  font-weight: 700;
+}
+
+/* hero two */
+
+.hero-two {
+  background: rgb(252,252,252);
+}
+
+.hero-two h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  width: 30%;
+}
+
+.hero-two p {
+  width: 52%;
+  margin: 20px 20px 40px 0;
+  font-size: 1.8em;
+  font-weight: 500;
+  color: rgb(174,189,201);
+}
+
+.hero-two img {
+  width: 100%;
+}
+
+.container {
+  padding: 15px 120px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    padding: 15px 80px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 15px 60px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  main .hero {
+    height: 450px;
+  }
+
+  main .hero .hero-text-container h1,
+  main .hero .hero-text-container p {
+    width: 100%;
+  }
+
+  .card-container section p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .container,
+  header {
+    padding: 15px 20px;
+  }
+
+  header {
+    border-bottom: 2px solid rgb(225,233,238);
+  }
+
+  main .hero {
+    flex-direction: column;
+    align-items: initial;
+    height: initial;
+  }
+
+  main .hero .hero-text-container span {
+    font-size: 1.6em;
+  }
+  
+  main .hero .hero-text-container h1,
+  .hero-two h2 {
+    width: 95%;
+    margin-block: 20px;
+    font-size: 4em;
+  }
+
+  main .hero .hero-text-container p {
+    width: 95%;
+    font-size: 2em;
+  }
+  
+  main .hero .hero-text-container form {
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  main .hero .hero-text-container form input {
+    width: 100%;
+    max-width: initial;
+    margin-block: 7px;
+    padding: 10px;
+    border: none;
+  }
+  
+  main .hero .hero-text-container form ::placeholder {
+    font-size: 1.2em;
+  }
+
+  main .hero img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .card-container {
+    justify-content: center;
+    align-content: initial;
+    flex-wrap: wrap;
+    margin-block: 20px;
+  }
+  
+  .card-container section {
+    flex: 1 0 45%;
+  }
+
+  .card-container section svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .card-container section h3 {
+    font-size: 1.8em;
+  }
+  
+  .card-container section p,
+  .card-container section a {
+    display: block;
+    width: 90%;
+    margin-block: 15px;
+    font-size: 1.6em;
+  }
+  
+  .card-container section a {
+    margin-bottom: 40px;
+  }
+
+  .hero-two p {
+    width: 90%;
+  }
+
+}
