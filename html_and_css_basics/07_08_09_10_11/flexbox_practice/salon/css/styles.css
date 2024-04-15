@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 :root {
   --black: rgba(1,1,1,1);
   --crimson: rgba(240,31,31,1);
@@ -16,71 +18,101 @@ html {
   --royal-purple: rgba(85,37,130,1);
   --saddle-brown: rgba(139,90,43,1);
   --white: rgba(252,252,252,1);
+
   --heading-font: "Cinzel Decorative", serif;
   --body-font: "Merriweather", sans-serif;
 }
+
 body {
   font-family: var(--body-font);
   background: var(--parchment);
   color: var(--black);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
-  color: var(--golden-yellow) 
+  color: var(--golden-yellow)
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 img {
   border-radius: 5px;
 }
+
 /* HEADER */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
 }
+
 .container {
   padding: 10px 40px;
 }
+
 /* LOGO AND NAV FLEX */
-header .logo-section, header nav > ul {
+header .logo-section,
+header nav > ul {
   display: flex;
   align-items: center;
   gap: 7px;
 }
+
 header {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 }
+
 /* HEADER LOGO */
+
 header .logo-section span {
   font-family: var(--heading-font);
   font-size: 2rem;
   font-weight: 600;
 }
+
 /* HEADER NAV */
+
 header nav > ul {
   gap: 25px;
 }
+
 header nav > ul > li > a {
   font-size: 1.4rem;
   font-weight: 600;
 }
-/* HEADER BOOK ONLINE */
+
+/* HEADER BOOK ONLINE  */
+
 header .book-online a {
   font-family: var(--heading-font);
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 /* MAIN HERO */
+
 main .hero {
   position: relative;
   height: 55vh;
-  background: linear-gradient(to right, rgba(0, 128, 64, 1) 0%, var(--emerald) 50%, rgba(0, 128, 64, 1) 100%);
+  background: linear-gradient(to right, 
+    rgba(0, 128, 64, 1) 0%,
+    var(--emerald) 50%,
+    rgba(0, 128, 64, 1) 100%);
 }
-main .hero img, main .hero .large-screen-only {
+
+main .hero img,
+main .hero .large-screen-only {
   position: absolute;
   top: 0;
   right: 2%;
@@ -88,23 +120,27 @@ main .hero img, main .hero .large-screen-only {
   transform: scaleX(-1);
   z-index: 1;
 }
+
 main .hero .hero-text-container {
   display: flex;
   flex-direction: column;
   z-index: 2;
 }
+
 main .hero .hero-text-container h1 {
   padding-top: 60px;
   font-size: 5rem;
   font-weight: 600;
   color: var(--golden-yellow);
 }
+
 main .hero .hero-text-container p {
   padding-block: 20px;
   font-size: 2rem;
   font-weight: 300;
   color: var(--white);
 }
+
 main .hero .hero-text-container a {
   max-width: 200px;
   padding: 10px;
@@ -114,40 +150,51 @@ main .hero .hero-text-container a {
   background: var(--royal-purple);
   text-align: center;
 }
+
 main .hero .hero-text-container a:hover {
   background: var(--white);
   color: var(--royal-purple);
 }
+
 main .hero .hours {
   position: absolute;
   bottom: 50%;
   right: -80px;
   transform: rotate(90deg);
 }
+
 main .hero .hours span {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--white);
 }
+
 /* ABOUT */
-main .about .card-container, main .about .card-container .card {
+
+main .about .card-container,
+main .about .card-container .card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 main .about .card-container {
   padding-block: 40px;
 }
+
 main .about .card-container .card {
   flex-direction: column;
 }
+
 main .about .card-container .card h3 {
   padding-block: 10px;
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--saddle-brown);
 }
-main .about .card-container .card p, main .video .video-text-container p {
+
+main .about .card-container .card p,
+main .video .video-text-container p {
   width: 80%;
   margin: 0 auto;
   padding-block: 10px;
@@ -155,8 +202,11 @@ main .about .card-container .card p, main .video .video-text-container p {
   font-weight: 600;
   text-align: center;
 }
+
 /* VIDEO */
-main .video .video-text-container a, main .banner .banner-text a {
+
+main .video .video-text-container a,
+main .banner .banner-text a {
   display: block;
   max-width: 200px;
   margin-top: 10px;
@@ -168,38 +218,49 @@ main .video .video-text-container a, main .banner .banner-text a {
   background: var(--black);
   color: var(--white) ;
 }
+
 main .video {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: linear-gradient(to right, rgba(150, 15, 15, 1) 0%, var(--crimson) 50%, rgba(150, 15, 15, 1) 100%);
+  background: linear-gradient(to right, 
+    rgba(150, 15, 15, 1) 0%,
+    var(--crimson) 50%,
+    rgba(150, 15, 15, 1) 100%);
 }
+
 main .video .video-text-container {
   max-width: 300px;
 }
+
 main .video .video-text-container h2 {
   width: 70%;
   padding-block: 10px;
   font-size: 2.2rem;
   font-weight: 600;
 }
-main .video .video-text-container p {
+
+main .video .video-text-container p { 
   width: initial;
   font-size: 1.4rem;
   font-weight: 500;
   text-align: left;
 }
+
 main .video .video-text-container a {
   background: var(--royal-purple);
   color: var(--white);
 }
+
 main .video .video-text-container a:hover {
   background: var(--white);
   color: var(--royal-purple);
 }
+
 /* STYLISTS */
+
 main .stylists {
   display: flex;
   justify-content: center;
@@ -207,10 +268,12 @@ main .stylists {
   gap: 20px;
   padding-block: 40px;
 }
+
 main .stylists .card img {
   position: relative;
   z-index: 3;
 }
+
 main .stylists .card .card-text {
   position: relative;
   max-width: 200px;
@@ -218,10 +281,14 @@ main .stylists .card .card-text {
   margin-top: -30px;
   padding: 20px;
   border-radius: 5px;
-  background: linear-gradient(to right, rgba(77, 50, 23, 1) 0%, var(--saddle-brown) 50%, rgba(77, 50, 23, 1) 100%);
+  background: linear-gradient(to right, 
+            rgba(77, 50, 23, 1) 0%,
+            var(--saddle-brown) 50%,
+            rgba(77, 50, 23, 1) 100%);
   z-index: 4;
   text-align: center;
 }
+
 main .stylists .card .card-text h4 {
   padding-bottom: 3px;
   font-family: var(--heading-font);
@@ -229,59 +296,72 @@ main .stylists .card .card-text h4 {
   font-weight: 600;
   color: var(--goldenrod);
 }
+
 main .stylists .card .card-text span {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--white);
 }
+
 /* BANNER */
+
 main .banner {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
   padding: 0 20px;
-  background: linear-gradient(to right, rgba(33, 84, 118, 1) 0%, 
- /* Darker shade of mystic blue */
-  var(--mystic-blue) 50%, 
- /* Provided color */
-  rgba(33, 84, 118, 1) 100%);
+  background: linear-gradient(to right, 
+    rgba(33, 84, 118, 1) 0%, /* Darker shade of mystic blue */
+    var(--mystic-blue) 50%, /* Provided color */
+    rgba(33, 84, 118, 1) 100%);
 }
-main .about .card-container, main .stylists {
+
+main .about .card-container,
+main .stylists {
   justify-content: space-evenly;
 }
+
 main .banner .banner-text h4 {
   font-family: var(--body-font);
   font-size: 1.6rem;
   font-weight: 400;
 }
+
 main .banner .banner-text h5 strong {
   font-size: 2.2rem;
 }
+
 main .banner .banner-text h5 {
   padding-block: 5px;
   font-size: 2rem;
   font-weight: 600;
 }
+
 main .banner .banner-text a {
   max-width: 200px;
   background: var(--royal-purple);
   color: var(--white);
 }
+
 main .banner .banner-text a:hover {
   background: var(--white);
   color: var(--royal-purple);
 }
+
 /* GALLERY */
+
 .gallery {
   text-align: center;
   padding-block: 40px;
 }
+
 .gallery h2 {
   font-size: 3rem;
   font-weight: 600;
   color: var(--saddle-brown);
 }
+
 .gallery .grid-container {
   padding-top: 40px;
   display: grid;
@@ -290,6 +370,8 @@ main .banner .banner-text a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-.mobile, .large-screen-only {
+
+.mobile,
+.large-screen-only {
   display: none;
 }
