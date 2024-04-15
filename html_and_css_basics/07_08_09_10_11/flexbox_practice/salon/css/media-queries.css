@@ -1,0 +1,567 @@
+/* 
+
+IPHONE SE
+IPHONE 12 PRO
+SAMSUNG GALAXY A51/71
+*/
+
+@media all and (min-width: 375px) and (max-width: 412px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  header {
+    padding-inline: 10px;
+  }
+
+  /* HERO */
+
+  main .hero {
+    height: 35vh;
+  }
+
+  main .hero img {
+   display: none;
+  }
+
+  main .hero .hero-text-container {
+    text-align: center;
+  }
+
+  main .hero .hero-text-container h1 {
+    padding-top: 30px;
+    font-size: 3.5rem;
+  }
+
+  main .hero .hero-text-container p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  main .hero .hero-text-container a {
+    width: 100%;
+    max-width: initial;
+    padding: 10px 0;
+    font-size: 1.6rem;
+  }
+
+  main .hero .markdown {
+    display: none;
+  }
+
+  main .hero .hours {
+    position: initial;
+    transform: none;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  main .hero .hours span {
+    font-size: 1.5rem;
+  }
+
+  main .about .card-container,
+  main .stylists {
+    flex-direction: column;
+  }
+
+  .video img {
+    width: 100%;
+    max-width: 345px;
+  }
+
+  .video .video-text-container {
+    display: none;
+  }
+
+  main .banner,
+  main .banner img {
+    gap: 0;
+    height: 25vh;
+    padding: 0;
+  }
+
+  main .banner .banner-text h4,
+  main .banner .banner-text h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  main .banner .banner-text a {
+    width: 100%;
+    max-width: 150px;
+    margin: 5px auto;
+    font-size: 1rem;
+  }
+
+  .gallery .grid-container {
+    display: block;
+  }
+}
+
+
+/* 
+IPHONE XR 
+IPHONE 14 PRO MAX
+PIXEL 7
+*/
+
+@media all and (min-width: 412px) and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  header {
+    padding-inline: 10px;
+  }
+
+  /* HERO */
+
+  main .hero {
+    height: 35vh;
+  }
+
+  main .hero img {
+   display: none;
+  }
+
+  main .hero .hero-text-container {
+    text-align: center;
+  }
+
+  main .hero .hero-text-container h1 {
+    font-size: 3.5rem;
+  }
+
+  main .hero .hero-text-container p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  main .hero .hero-text-container a, main .video .video-text-container a, main .banner .banner-text a {
+    width: 100%;
+    max-width: 200px;
+    margin: 3px auto;
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+
+  main .hero .hours {
+    position: initial;
+    transform: none;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  main .hero .hours span {
+    font-size: 1.5rem;
+  }
+
+  main .about .card-container,
+  main .stylists {
+    flex-direction: column;
+  }
+
+  .video img {
+    width: 100%;
+    max-width: 345px;
+  }
+
+  .video .video-text-container {
+    display: none;
+  }
+
+  main .banner,
+  main .banner img {
+    gap: 0;
+    height: 25vh;
+    padding: 0;
+  }
+
+  main .banner .banner-text h4,
+  main .banner .banner-text h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  main .banner .banner-text a {
+    width: 100%;
+    max-width: 150px;
+    margin: 5px auto;
+    font-size: 1rem;
+  }
+
+  main .about .card-container .card {
+    margin-bottom: 14px;
+  }
+
+  .gallery .grid-container {
+    display: block;
+  }
+}
+
+/* 600 - 768 */
+
+@media all and (min-width: 600px) and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  header {
+    padding-inline: 10px;
+  }
+
+  /* HERO */
+
+  main .hero {
+    height: 35vh;
+  }
+
+  main .hero img {
+   display: none;
+  }
+
+  main .hero .hero-text-container {
+    text-align: center;
+  }
+
+  main .hero .hero-text-container h1 {
+    font-size: 3.5rem;
+  }
+
+  main .hero .hero-text-container p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  main .hero .hero-text-container a, main .video .video-text-container a, main .banner .banner-text a {
+    width: 100%;
+    max-width: 200px;
+    margin: 3px auto;
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+
+  main .hero .hours {
+    position: initial;
+    transform: none;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  main .hero .hours span {
+    font-size: 1.5rem;
+  }
+
+  main .about .card-container .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  main .about .card-container,
+  main .stylists {
+    flex-direction: column;
+  }
+
+  main .video {
+    gap: 0;
+    height: 40vh;
+  }
+
+  main .video .video-text-container {
+    max-width: initial;
+  }
+
+  main .video .video-text-container h2 {
+    width: initial;
+    padding-block: 3px;
+    font-size: 1.8rem;
+  }
+
+  main .video .video-text-container p {
+    font-size: 1.2rem;
+  }
+
+  main .video img {
+    width: 100%;
+    max-width: 235px;
+  }
+
+  main .banner,
+  main .banner img {
+    gap: 0;
+    height: 40vh;
+    padding: 0;
+  }
+
+  main .banner .banner-text h4,
+  main .banner .banner-text h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  main .banner .banner-text a {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    font-size: 1.4rem;
+  }
+
+  main .about .card-container .card {
+    margin-bottom: 14px;
+  }
+
+  main .gallery .grid-container {
+    display: block;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 950px) {
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  main .hero,
+  main .hero img {
+    height: 35vh;
+  }
+
+  main .hero img {
+   right: 10%;
+  }
+
+  main .hero .hero-text-container p {
+    font-size: 1.8rem;
+  }
+
+  main .stylists .card img {
+    width: 240px;
+  }
+
+  main .banner .banner-text h4,
+  main .banner .banner-text h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  main .banner .banner-text a {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    font-size: 1.4rem;
+  }
+
+  main .gallery .grid-container img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+@media all and (min-width: 950px) and (max-width: 1400px) {
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  main .hero,
+  main .hero img {
+    height: 60vh;
+  }
+
+  main .hero img {
+    right: 0;
+   }
+
+  main .hero .hero-text-container h1 {
+    font-size: 6.5rem;
+  }
+
+  main .hero .hero-text-container p {
+    padding-block: 20px;
+    padding-top: 5px;
+  }
+
+  main .hero .hero-text-container a, main .video .video-text-container a, main .banner .banner-text a {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+
+  main .hero .hours {
+    right: -125px;
+  }
+
+  main .hero .hours span {
+    font-size: 2rem;
+  }
+
+  main .about .card-container .card img {
+    width: 100%;
+    max-width: 225px;
+    height: initial;
+  }
+
+  main .video {
+    height: 40vh;
+    justify-content: space-evenly;
+  }
+
+  main .video .video-text-container {
+    max-width: 600px;
+  }
+
+  main .video .video-text-container h2 {
+    width: initial;
+  }
+
+  main .video .video-text-container p {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  main .video img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  main .banner img {
+    width: 40vh;
+    padding: 0;
+  }
+
+  main .stylists .card img ,
+  main .gallery .grid-container img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+
+@media all and (min-width: 1400px) and (max-width: 2000px) {
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  main .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .hero,
+  main .hero img {
+    height: 60vh;
+  }
+
+  main .hero img {
+    right: 0;
+  }
+
+  main .hero .large-screen-only {
+    display: initial;
+    left: 0;
+    height: 60vh;
+    transform: initial;
+  }
+
+  main .hero .hero-text-container {
+    align-items: center;
+  }
+
+  main .hero .hero-text-container h1 {
+    padding-top: 0;
+    font-size: 6.5rem;
+  }
+
+  main .hero .hero-text-container p {
+    padding-block: 20px;
+    padding-top: 5px;
+  }
+
+  main .hero .hero-text-container a, main .video .video-text-container a, main .banner .banner-text a {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+
+  main .hero .hours {
+    right: -125px;
+  }
+
+  main .hero .hours span {
+    font-size: 2rem;
+  }
+
+  main .about .card-container .card img {
+    width: 100%;
+    max-width: 225px;
+    height: initial;
+  }
+
+  main .video {
+    height: 40vh;
+    justify-content: space-evenly;
+  }
+
+  main .video .video-text-container {
+    max-width: 600px;
+  }
+
+  main .video .video-text-container h2 {
+    width: initial;
+  }
+
+  main .video .video-text-container p {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  main .video img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  main .banner img {
+    width: 40vh;
+    padding: 0;
+  }
+
+  main .stylists .card img ,
+  main .gallery .grid-container img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
