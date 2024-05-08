@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+
+FLOATS
+
+header,
+footer {
+  height: 100px;
+  background: gray;
+  border: 1px solid darkgray;
+  clear: both;
+}
+
+main .first section {
+  float: left;
+  width: 33.3333%;
+  height: 200px;
+  background: gray;
+  border: 1px solid darkgray;
+}
+
+main .second section {
+  float: left;
+  width: 50%;
+  height: 200px;
+  background: gray;
+  border: 1px solid darkgray;
+} */
+
+/* FLEX */
+
+header,
+footer {
+  height: 100px;
+  background: gray;
+  border: 1px solid darkgray;
+}
+
+main .first,
+main .second {
+  display: flex;
+}
+
+main .first section,
+main .second section {
+  flex: 1;
+  height: 200px;
+  background: gray;
+  border: 1px solid darkgray;
+}
