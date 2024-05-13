@@ -282,3 +282,76 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 
 
 */
+
+/* 
+MUSKETEERS
+Write a program that:
+
+Creates an array named musketeers containing values "Athos", "Porthos" and "Aramis".
+Shows each array element using a for loop.
+Adds the "D'Artagnan" value to the array.
+Shows each array element using the forEach() method.
+Remove poor Aramis.
+Shows each array element using a for-of loop.
+*/
+
+const musketeers = ["Athos", "Porthos", "Aramis"];
+for (let i = 0; i < musketeers.length; i++) {
+  musketeers[i];
+  console.log(musketeers[i]);
+}
+musketeers.push("D'Artagnan");
+musketeers.forEach((member) => {
+  if (member === "Aramis") {
+    musketeers.splice(2, 1)
+    console.log(musketeers)
+  }
+});
+
+for (const teamMember of musketeers ) {
+  console.log(teamMember)
+}
+
+/* 
+SUM OF VALUES:
+Write a program that creates the following array, then calculates and shows the sum of its values (42 in that case).
+const values = [3, 11, 7, 2, 9, 10];
+*/
+
+const sum = [3, 11, 7, 2, 9, 10].reduce((a, b) => a + b, 0);
+console.log(sum);
+
+/* 
+ARRAY MAXIMUM:
+Write a program that creates the following array, then calculates and shows the array's maximum value.
+const values = [3, 11, 7, 2, 9, 10];
+*/
+const values = [3, 11, 7, 2, 9, 10, 14]
+function largestNum(arr) {
+  arr.sort((a, b) => a - b);
+  console.log(arr[arr.length - 1])
+  return arr[arr.length - 1]
+}
+largestNum(values);
+
+/* 
+LIST OF WORDS:
+
+Write a program that asks the user for a word until the user types "stop". The program then shows each of these words, except "stop".
+
+*/
+
+function collectWordsUntilYouSeeStop() {
+  let words = [];
+  let input = prompt("Add words here with commas separating them. If you type the word 'stop the program will end!");
+
+  if (input !== "stop".toLowerCase()) {
+    words.push(input);
+  } 
+
+  for (let word of words) {
+    console.log(word)
+  }
+}
+
+collectWordsUntilYouSeeStop()
