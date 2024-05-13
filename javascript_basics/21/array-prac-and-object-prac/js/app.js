@@ -51,6 +51,14 @@ alert( arr ); // 5,3,8,1 (not modified)
 
 */
 
+function filterRange(arr, a, b) {
+  return arr.filter(item => (a <= item && item <= b));
+}
+
+let numbersTwo = [5, 3, 8, 1];
+let filtered = filterRange(numbersTwo, 1, 4);
+alert( filtered);
+alert (numbersTwo);
 
 /* 
 3) FILTER RANGE: "IN PLACE":
@@ -61,7 +69,30 @@ The function should only modify the array. It should not return anything.
 
 For instance:
 
+let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+alert( arr ); // [3, 1]
+
 */
+
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let value = arr[i];
+
+    if (value < a || value > b) {
+      arr.splice(i, 1);
+      i--
+    }
+  }
+}
+
+let numbersThree = [5, 3, 8, 1];
+
+filterRangeInPlace(numbersThree, 1, 4); // removed the numbers except from 1 to 4
+
+alert( numbersThree ); // [3, 1]
 
 /* 
 4) SORT IN DECREASING ORDER:
@@ -73,6 +104,11 @@ let arr = [5, 2, 1, -10, 8];
 alert( arr ); // 8, 5, 2, 1, -10
 
 */
+
+let numbersFour = [5, 2, 1, -10, 8];
+numbersFour.sort((a, b) => a - b)
+numbersFour.reverse();
+alert(numbersFour);
 
 /* 
 
@@ -90,6 +126,17 @@ alert( sorted ); // CSS, HTML, JavaScript
 alert( arr ); // HTML, JavaScript, CSS (no changes)
 
 */
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let wordsFive = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(wordsFive);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( wordsFive ); // HTML, JavaScript, CSS (no changes)
 
 /* 
 
@@ -117,6 +164,32 @@ There may be error handling if you’d like to add it.
 
 */
 
+function Calculator() {
+
+  this.methods = {
+    "-": (a, b) => a - b,
+    "+": (a, b) => a + b
+  };
+
+  this.calculate = function(str) {
+
+    let split = str.split(' '),
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+      return NaN;
+    }
+
+    return this.methods[op](a, b);
+  };
+
+  this.addMethod = function(name, func) {
+    this.methods[name] = func;
+  };
+}
+
 /* 
 7) MAP TO NAMES:
 
@@ -134,6 +207,16 @@ let names = YOUR CODE
 alert( names ); // John, Pete, Mary
 
 */
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map((user) => ` ${user.name}`);
+
+alert( names ); // John, Pete, Mary
 
 /* 
 8) MAP TO OBJECTS: 
@@ -163,6 +246,26 @@ So, actually you need to map one array of objects to another. Try using => here.
 
 */
 
+let johnTwo = { name: "John", surname: "Smith", id: 1 };
+let peteTwo = { name: "Pete", surname: "Hunt", id: 2 };
+let maryTwo = { name: "Mary", surname: "Key", id: 3 };
+
+let usersTwo = [ johnTwo, peteTwo, maryTwo ];
+
+let usersMapped = usersTwo.map((user) => ({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id
+}));
+
+// usersMapped = [
+//   { fullName: "John Smith", id: 1 },
+//   { fullName: "Pete Hunt", id: 2 },
+//   { fullName: "Mary Key", id: 3 }
+// ]
+
+alert( usersMapped[0].id ) // 1
+alert( usersMapped[0].fullName ) // John Smith
+
 /* 
 9) SORT USERS BY AGE:
 
@@ -184,6 +287,23 @@ alert(arr[2].name); // Pete
 
 */
 
+function sortByAge(arr) {
+  arr.sort((a, b) => a.age - b.age);
+}
+
+let johnThree = { name: "John", age: 25 };
+let peteThree = { name: "Pete", age: 30 };
+let maryThree = { name: "Mary", age: 28 };
+
+let arrNine = [ peteThree, johnThree, maryThree ];
+
+sortByAge(arrNine);
+
+// now sorted is: [john, mary, pete]
+alert(arrNine[0].name); // John
+alert(arrNine[1].name); // Mary
+alert(arrNine[2].name); // Pete
+
 /* 
 
 10) GET AVERAGE AGE: 
@@ -201,6 +321,18 @@ let arr = [ john, pete, mary ];
 
 alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 */
+
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+
+let johnFour = { name: "John", age: 25 };
+let peteFour = { name: "Pete", age: 30 };
+let maryFour = { name: "Mary", age: 29 };
+
+let arrTenTwo = [ johnFour, peteFour, maryFour ];
+
+alert( getAverageAge(arrTenTwo) ); // 28
 
 /* 
 
@@ -221,6 +353,24 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
 
 alert( unique(strings) ); // Hare, Krishna, :-O
 */
+
+function uniqueStr(arr) {
+  let result = [];
+
+  for (let str of arr) {
+    if (!result.includes(str)) {
+      result.push(str);
+    }
+  }
+
+  return result;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+alert( uniqueStr(strings) ); // Hare, Krishna, :-O
 
 /* 
 
@@ -259,6 +409,21 @@ Open a sandbox with tests.
 
 */
 
+function groupById(array) {
+  return array.reduce((obj, value) => {
+    obj[value.id] = value;
+    return obj;
+  }, {})
+}
+
+let usersTwelve = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let usersById = groupById(usersTwelve);
+
 /* 
 13) SHUFFLE AN ARRAY
 
@@ -282,6 +447,15 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 
 
 */
+
+
+function shuffle(arr) {
+  arr.sort(() => Math.random() - 0.5);
+}
+
+let arrTen = [1, 2, 3];
+shuffle(arrTen);
+alert(arrTen);
 
 /* 
 MUSKETEERS
@@ -341,17 +515,16 @@ Write a program that asks the user for a word until the user types "stop". The p
 
 */
 
-function collectWordsUntilYouSeeStop() {
-  let words = [];
-  let input = prompt("Add words here with commas separating them. If you type the word 'stop the program will end!");
 
-  if (input !== "stop".toLowerCase()) {
-    words.push(input);
-  } 
+function stopWhenYouSeeStop() {
+  let newArray = [];
 
-  for (let word of words) {
-    console.log(word)
+  while(1) {
+    let word = prompt("Enter a word");
+    if (word == "stop") break;
+    newArray.push(word);
   }
+  console.log(newArray)
 }
 
-collectWordsUntilYouSeeStop()
+// stopWhenYouSeeStop()
