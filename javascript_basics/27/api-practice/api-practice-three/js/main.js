@@ -2,13 +2,15 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
-  const choice = document.querySelector('input').value.toLowerCase();
-  const url = `https://pokeapi.co/api/v2/pokemon/${choice}`
+  const url = "https://v2.jokeapi.dev/joke/Any"
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
+        document.querySelector("span").innerText = `Category: ${data.category}`
+        document.querySelector("h2").innerText = data.setup;
+        document.querySelector("p").innerText = data.delivery;
       })
       .catch(err => {
           console.log(`error ${err}`)
