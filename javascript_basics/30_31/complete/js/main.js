@@ -39,21 +39,15 @@ class Cat extends Animal {
 }
 
 const renly = new Dog("Renly", "Catahoula");
-renly.speak();
- console.log(renly);
-
- const loras = new Dog("Loras", "Catahoula");
-renly.speak();
- console.log(loras);
-
+const loras = new Dog("Loras", "Catahoula");
 const catkeisha = new Cat("Catkeisha", "Mainecoone");
-catkeisha.speak();
-console.log(catkeisha);
 
 let farm = [renly, loras, catkeisha];
 
 for (domesticatedAnimal of farm) {
   domesticatedAnimal.speak();
+  console.log(domesticatedAnimal.name);
+  console.log(domesticatedAnimal.breed);
 }
 
 // class Animal{
