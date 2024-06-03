@@ -8,6 +8,10 @@
 
 // WHY - Smaller more manageable pieces of code (Helps you split the complexity of your software into manageable parts)
 
-// INHERITANCE - Make a class from another class for a hierarch of classes that share a set of properties and methods
+// INHERITANCE - Make a class from another class form a hierarchy of classes that share a set of properties and methods
 
-// WHY - 
+// WHY - Helps you eliminate redudant code
+
+// POLYMORPHISM - Code written to use an interface automatically knows how to work with any number of different objects that provide the interface
+
+// WHY - Helps you avoid conditionals (if/else and switch cases) - This trickles / bleeds down into the
