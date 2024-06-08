@@ -328,3 +328,49 @@ const checkForRose = (click) => {
 
 
 Array.from(contestants).forEach(element => element.addEventListener("click", checkForRose));
+
+/* 
+  Q: What are loops?
+  A: Repeat an action some number of times
+*/
+
+/* 
+  Q: What are the three main types of loops in Javascript?
+  A: 
+
+  FOR
+  Ex:
+  for ([initialExpression]; [conditionExpression]; [incrementExpression]) {
+    // do stuff
+  }
+
+  for (let i = 1; i < 5; i++) {
+    console.log(i)
+  }
+
+  WHILE
+  Ex:
+
+  let count = 0;
+  while (count < 5) {
+    console.log(count);
+    count++;
+  }
+
+*/
+
+/*------------- 
+  SAVAGE LOOP
+--------------*/
+
+//Create a function that has a loop that prints '21' 21 times to the console and then call that function
+//Bonus can you make it print '21' 21 times to the dom?
+
+const printTwentyOne = () => {
+  for (let i = 1; i <= 21; i++) {
+    console.log("21");
+    document.querySelector("#savageSays").innerText += " 21";
+  }
+}
+
+printTwentyOne()
