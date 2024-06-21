@@ -76,10 +76,3 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(8000);
-
-
-const addTwo = num => num + 2;
-const newVar = addTwo(2)
-console.log(newVar)
-
-
