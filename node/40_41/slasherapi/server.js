@@ -1,57 +1,39 @@
-const MongoClient = require('mongodb').MongoClient;
 const express = require("express");
-const bodyParser = require('body-parser')
 const app = express();
+const MongoClient = require('mongodb').MongoClient;
 const PORT = 8000;
-
-//dot env and body parser
 require('dotenv').config();
-app.use(bodyParser.urlencoded({ extended: true }));
 
-const connectionString = `mongodb+srv://deschdev:${process.env.MONGOPASS}@slashercluster0.lqtxcg6.mongodb.net/?retryWrites=true&w=majority&appName=slasherCluster0`;
+let db,
+    dbConnectionStr = process.env.MONGOPASS,
+    dbName = "iconic-slashers"
 
 // ensuring we can use ejs views
 app.set("view engine", "ejs");
-
-// getting the index html file
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
-
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
-  .then(client => {
-    console.log('Connected to Database')
-    const db = client.db('iconic-slashers');
-
-    const slasherCollection = db.collection("slashers");
-
-    // CREATE(post) - slasher form
-    app.post('/slashers', (req, res) => {
-      slasherCollection
-        .insertOne(req.body)
-        .then(result => {
-          res.redirect("/")
-        })
-        .catch(error => console.error(error));
-    });
-
-    // READ(get) the slashers
-    app.get("/", (req, res) => {
-      db.collection("slashers")
-        .find()
-        .toArray()
-        .then(results => {
-          res.render("index.ejs", { slashers: results });
-        })
-        .catch(error => console.error(error));
-    });
-})
-.catch(error => console.error(error));
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
 
 // what port our app is listening on
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+  .then(client => {
+    console.log(`Connected to ${dbName} Database`);
+    db = client.db(dbName);
+
+    app.get("/", (req, res) => {
+      db.collection("slashers").find().toArray()
+      .then(data => {
+        res.render("index.ejs", {slashers: data})
+      })
+      .catch(error => console.error(error));
+    });
+
+  })
+  .catch(error => console.error(error));
 
 
 
