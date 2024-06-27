@@ -1,0 +1,31 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iconic Slashers App</title>
+  </head>
+
+  <body>
+    <h1>ICONIC SLASHERS</h1>
+
+    <form action="/slashers" method="POST">
+      <input type="text" placeholder="name" name="birthName" />
+      <input type="text" placeholder="birthplace" name="birthLocation" />
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Slashers</h2>
+
+    <ul class="slashers">
+      <!-- Loop through quotes -->
+      <% for(let i = 0; i < slashers.length; i++) {%>
+      <li class="slasher-info">
+        <!-- Output name from the iterated quote object -->
+        <span><%= slashers[i].birthName %></span>:
+        <!-- Output quote from the iterated quote object -->
+        <span><%= slashers[i].birthLocation %></span>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
